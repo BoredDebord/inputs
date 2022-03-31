@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Javascript Stuff
+        </title>
+        <meta charset="UTF-8">
+        <style>
+            .border {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border: 5px blue;
+                padding: 10px;
+            }
+            .size {
+                height: 50px;
+                width: 200px;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="textBox" style="font-size: 18px" class="border">I know what you're typing!
+        <input style="margin-top: 5px" id="textBox" class="size" type="text"></input>
+        <div id="output"></div>
+        </label>
+        <script>
+            let textBox = document.querySelector("#textBox");
+            let output = document.querySelector("#output");
+            textBox.addEventListener("keydown", event => output.textContent = `You pressed "${event.key}".`);
+        </script>
+    </body>
+</html>
