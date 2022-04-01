@@ -35,6 +35,12 @@
         }
         return num;
     }
+    function circumference(num) {
+        return 2 * Math.PI * num;
+    }
+    function area(num) {
+        return Math.PI * squared(num);
+    }
 
     input.addEventListener("change", () => {
         const num = parseFloat(input.value);
@@ -44,6 +50,8 @@
             para.textContent = `${num} squared is ${squared(num)}. `;
             para.textContent += `${num} cubed is ${cubed(num)}. `;
             para.textContent += `${num} factorial is ${factorial(num)}. `;
+            para.textContent += `The circumference of a circle with radius ${num} is ${circumference(num)}. `;
+            para.textContent += `The area of a circle with radius ${num} is ${area(num)}. `;
         }
     });
   </script>
